@@ -1,5 +1,6 @@
-package uk.devoxx.tackle_eventual_consistency.acl.publisher;
+package nl.the_experts.tackle_eventual_consistency_with_domain_events.acl.publisher;
 
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher.PublisherDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -7,7 +8,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.web.client.RestTemplate;
-import uk.devoxx.tackle_eventual_consistency.domaininteraction.publisher.PublisherDTO;
 
 import java.util.List;
 import java.util.UUID;
