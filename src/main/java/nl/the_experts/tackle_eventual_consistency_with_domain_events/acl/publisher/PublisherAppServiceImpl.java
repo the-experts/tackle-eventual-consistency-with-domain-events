@@ -2,13 +2,12 @@ package nl.the_experts.tackle_eventual_consistency_with_domain_events.acl.publis
 
 import io.micrometer.common.util.StringUtils;
 import jakarta.json.Json;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher.PublisherAppService;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher.PublisherDTO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher.PublisherAppService;
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher.PublisherDTO;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

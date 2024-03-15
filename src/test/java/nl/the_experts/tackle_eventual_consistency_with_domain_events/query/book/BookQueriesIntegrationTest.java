@@ -1,16 +1,18 @@
-package uk.devoxx.tackle_eventual_consistency.query.book;
+package nl.the_experts.tackle_eventual_consistency_with_domain_events.query.book;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.json.Json;
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.author.AuthorJPA;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.book.BookJPA;
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockserver.client.MockServerClient;
 import org.mockserver.model.Header;
 import org.mockserver.springtest.MockServerTest;
-import uk.devoxx.tackle_eventual_consistency.data.author.AuthorJPA;
-import uk.devoxx.tackle_eventual_consistency.data.book.BookJPA;
-import jakarta.persistence.EntityManager;
-import jakarta.transaction.Transactional;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,12 +20,10 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-import javax.json.Json;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockserver.matchers.Times.exactly;
 import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
@@ -92,8 +92,8 @@ class BookQueriesIntegrationTest {
         var resultingBookViews = objectMapper.readValue(
                 result.getResponse().getContentAsString(), new TypeReference<List<BookView>>() {
                 });
-        assertThat(resultingBookViews).hasSize(2);
-        assertThat(resultingBookViews).usingRecursiveFieldByFieldElementComparatorIgnoringFields("id")
+        Assertions.assertThat(resultingBookViews).hasSize(2);
+        Assertions.assertThat(resultingBookViews).usingRecursiveFieldByFieldElementComparatorIgnoringFields("id")
                 .containsExactlyInAnyOrder(expectedBookView1, expectedBookView2);
     }
 
@@ -131,8 +131,8 @@ class BookQueriesIntegrationTest {
         // then
         var resultingBookViews = objectMapper.readValue(
                 result.getResponse().getContentAsString(), new TypeReference<List<BookView>>() { });
-        assertThat(resultingBookViews).hasSize(1);
-        assertThat(resultingBookViews).usingRecursiveFieldByFieldElementComparatorIgnoringFields("id")
+        Assertions.assertThat(resultingBookViews).hasSize(1);
+        Assertions.assertThat(resultingBookViews).usingRecursiveFieldByFieldElementComparatorIgnoringFields("id")
                 .containsExactly(expectedBookView);
     }
 

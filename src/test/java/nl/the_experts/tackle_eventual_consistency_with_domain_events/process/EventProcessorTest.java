@@ -1,12 +1,11 @@
-package uk.devoxx.tackle_eventual_consistency.process;
+package nl.the_experts.tackle_eventual_consistency_with_domain_events.process;
 
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.book.Book;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
-import uk.devoxx.tackle_eventual_consistency.domain.book.Book;
-import uk.devoxx.tackle_eventual_consistency.process.book.PublishBookDelegate;
 
 import java.util.UUID;
 

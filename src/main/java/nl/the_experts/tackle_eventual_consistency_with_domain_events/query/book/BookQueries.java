@@ -4,11 +4,11 @@ import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininter
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.author.AuthorFlow;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDTO;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookFlow;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher.PublisherFlow;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import uk.devoxx.tackle_eventual_consistency.domaininteraction.publisher.PublisherFlow;
 
 import java.util.List;
 import java.util.UUID;

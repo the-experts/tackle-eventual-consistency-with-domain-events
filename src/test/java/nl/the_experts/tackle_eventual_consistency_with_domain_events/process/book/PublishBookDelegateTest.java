@@ -1,19 +1,19 @@
-package uk.devoxx.tackle_eventual_consistency.process.book;
+package nl.the_experts.tackle_eventual_consistency_with_domain_events.process.book;
 
+import jakarta.json.Json;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.book.Book;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDTO;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDataService;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookFlow;
 import org.junit.jupiter.api.Test;
 import org.mockserver.client.MockServerClient;
 import org.mockserver.model.Header;
 import org.mockserver.springtest.MockServerTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import uk.devoxx.tackle_eventual_consistency.domain.book.Book;
-import uk.devoxx.tackle_eventual_consistency.domaininteraction.book.BookDTO;
-import uk.devoxx.tackle_eventual_consistency.domaininteraction.book.BookDataService;
-import uk.devoxx.tackle_eventual_consistency.domaininteraction.book.BookFlow;
 
-import javax.json.Json;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 

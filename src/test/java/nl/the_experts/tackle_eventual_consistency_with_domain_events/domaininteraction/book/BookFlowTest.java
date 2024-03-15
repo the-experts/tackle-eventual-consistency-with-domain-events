@@ -1,12 +1,12 @@
 package nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book;
 
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.author.AuthorDTO;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher.PublisherAppService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import uk.devoxx.tackle_eventual_consistency.domaininteraction.publisher.PublisherAppService;
 
 import java.util.ArrayList;
 import java.util.List;
