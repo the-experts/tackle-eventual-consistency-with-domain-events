@@ -1,10 +1,8 @@
 package nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.book;
 
+import lombok.*;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.DomainEvent;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.author.Author;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;

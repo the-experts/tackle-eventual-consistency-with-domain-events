@@ -5,6 +5,7 @@ import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.book.BookJPA;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.DomainEvent;
 
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 

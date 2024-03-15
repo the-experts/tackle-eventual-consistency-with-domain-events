@@ -1,20 +1,14 @@
 package nl.the_experts.tackle_eventual_consistency_with_domain_events.data.book;
 
 
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.author.AuthorJPA;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.SequenceGenerator;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import uk.devoxx.tackle_eventual_consistency.domain.DomainEvent;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.author.AuthorJPA;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.DomainEvent;
+import org.springframework.data.domain.AbstractAggregateRoot;
 
 import java.util.List;
 import java.util.UUID;

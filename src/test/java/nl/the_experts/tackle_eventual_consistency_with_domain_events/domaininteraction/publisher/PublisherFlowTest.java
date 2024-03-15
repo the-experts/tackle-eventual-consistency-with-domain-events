@@ -1,5 +1,6 @@
 package nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher;
 
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.book.Book;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.author.AuthorDTO;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDTO;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDataService;
