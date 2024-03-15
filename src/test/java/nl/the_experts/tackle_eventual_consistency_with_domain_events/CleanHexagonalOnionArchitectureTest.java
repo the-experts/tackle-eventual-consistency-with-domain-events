@@ -6,6 +6,9 @@ import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.book.BookJPA;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.DomainEvent;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.book.Book;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.process.EventProcessor;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.process.book.PublishBookDelegate;
 
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 

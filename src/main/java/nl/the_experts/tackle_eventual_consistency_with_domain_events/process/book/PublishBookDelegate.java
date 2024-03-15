@@ -1,10 +1,10 @@
-package uk.devoxx.tackle_eventual_consistency.process.book;
+package nl.the_experts.tackle_eventual_consistency_with_domain_events.process.book;
 
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.book.Book;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookFlow;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import uk.devoxx.tackle_eventual_consistency.domain.book.Book;
-import uk.devoxx.tackle_eventual_consistency.domaininteraction.book.BookFlow;
 
 @Service
 public class PublishBookDelegate {

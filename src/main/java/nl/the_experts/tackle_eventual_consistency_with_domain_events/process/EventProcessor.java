@@ -1,10 +1,10 @@
-package uk.devoxx.tackle_eventual_consistency.process;
+package nl.the_experts.tackle_eventual_consistency_with_domain_events.process;
 
 import lombok.extern.slf4j.Slf4j;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.book.Book;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.process.book.PublishBookDelegate;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.event.TransactionalEventListener;
-import uk.devoxx.tackle_eventual_consistency.domain.book.Book;
-import uk.devoxx.tackle_eventual_consistency.process.book.PublishBookDelegate;
 
 import static org.springframework.transaction.event.TransactionPhase.AFTER_COMMIT;
 
@@ -23,7 +23,8 @@ public class EventProcessor {
     }
 
     @TransactionalEventListener(phase = AFTER_COMMIT)
-    public void handleEvent(Book.RequestPublishingEvent requestPublishingEvent) {
+    public void handleEvent(
+            Book.RequestPublishingEvent requestPublishingEvent) {
         log.info(requestPublishingEvent.toString());
         publishBookDelegate.publishBook(requestPublishingEvent);
     }
