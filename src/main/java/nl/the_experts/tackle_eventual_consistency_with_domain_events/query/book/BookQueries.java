@@ -34,11 +34,11 @@ public class BookQueries {
     public List<BookView> findBooks(@RequestParam(value = "title", required = false) String title) {
         if(title == null || title.isEmpty()) {
             return bookFlow.findAllBooks().stream()
-                    .map(bookDTO -> new BookView(bookDTO, getBookAuthor(bookDTO), getPublisherName(bookDTO.publisherId())))
+                    .map(bookDTO -> new BookView(bookDTO, getBookAuthor(bookDTO)))
                     .toList();
         } else {
             return bookFlow.findAllBooksWithMatchingTitle(title).stream()
-                    .map(bookDTO -> new BookView(bookDTO, getBookAuthor(bookDTO), getPublisherName(bookDTO.publisherId())))
+                    .map(bookDTO -> new BookView(bookDTO, getBookAuthor(bookDTO)))
                     .toList();
         }
     }

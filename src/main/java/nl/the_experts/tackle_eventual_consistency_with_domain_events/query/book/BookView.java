@@ -7,8 +7,8 @@ import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininter
  * @author Maik Kingma
  */
 
-public record BookView(Long id, String title, String genre, String isbn, String publisherName, String authorName) {
-    public BookView(BookDTO bookDTO, AuthorDTO authorDTO, String publisherName) {
-        this(bookDTO.id(), bookDTO.title(), bookDTO.genre(), bookDTO.isbn(), publisherName, authorDTO.getFullName());
+public record BookView(Long id, String title, String genre, String authorName) {
+    public BookView(BookDTO bookDTO, AuthorDTO authorDTO) {
+        this(bookDTO.id(), bookDTO.title(), bookDTO.genre(), authorDTO.getFullName());
     }
 }

@@ -1,9 +1,9 @@
 package nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher;
 
-import org.springframework.stereotype.Service;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDTO;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDataService;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDomainMapper;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
@@ -32,6 +32,7 @@ public class PublisherFlow {
         }
         book.requestPublishing(publisherDTO.id());
         var updatedBookDto = new BookDTO(book);
+
         bookDataService.save(updatedBookDto);
     }
 
