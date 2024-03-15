@@ -1,8 +1,6 @@
 package nl.the_experts.tackle_eventual_consistency_with_domain_events.data.book;
 
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.author.AuthorJPAMapper;
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.book.BookJPA;
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.book.BookJPAMapper;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.author.AuthorDTO;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDTO;
 import org.junit.jupiter.api.Test;

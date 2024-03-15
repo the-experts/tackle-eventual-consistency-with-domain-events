@@ -1,25 +1,20 @@
 package nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher;
 
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher.PublisherAppService;
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher.PublisherDTO;
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.publisher.PublisherFlow;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.author.AuthorDTO;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDTO;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDataService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.author.AuthorDTO;
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDTO;
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book.BookDataService;
 
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class PublisherFlowTest {
