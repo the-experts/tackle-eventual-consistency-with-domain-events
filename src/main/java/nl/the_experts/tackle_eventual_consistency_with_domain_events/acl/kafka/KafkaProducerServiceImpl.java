@@ -1,9 +1,9 @@
-package uk.devoxx.tackle_eventual_consistency.acl.kafka;
+package nl.the_experts.tackle_eventual_consistency_with_domain_events.acl.kafka;
 
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.kafka.KafkaProducerService;
 import org.slf4j.Logger;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-import uk.devoxx.tackle_eventual_consistency.domaininteraction.kafka.KafkaProducerService;
 
 import static org.slf4j.LoggerFactory.getLogger;
 

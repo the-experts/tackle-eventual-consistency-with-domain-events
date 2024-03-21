@@ -7,8 +7,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.author.AuthorJPA;
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.DomainEvent;
-import org.springframework.data.domain.AbstractAggregateRoot;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.baserepository.AggregateRoot;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.domainevent.DomainEvent;
 
 import java.util.List;
 import java.util.UUID;

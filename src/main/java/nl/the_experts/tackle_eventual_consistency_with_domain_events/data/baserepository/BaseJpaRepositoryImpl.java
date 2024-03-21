@@ -1,13 +1,13 @@
-package uk.devoxx.tackle_eventual_consistency.data.baserepository;
+package nl.the_experts.tackle_eventual_consistency_with_domain_events.data.baserepository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.kafka.KafkaProducerService;
 import org.slf4j.Logger;
 import org.springframework.data.jpa.repository.support.JpaEntityInformation;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.transaction.support.TransactionSynchronization;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
-import uk.devoxx.tackle_eventual_consistency.domaininteraction.kafka.KafkaProducerService;
 
 import java.io.Serializable;
 import java.util.ArrayList;

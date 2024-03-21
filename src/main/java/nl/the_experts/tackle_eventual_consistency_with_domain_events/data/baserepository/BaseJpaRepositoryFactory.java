@@ -1,10 +1,10 @@
-package uk.devoxx.tackle_eventual_consistency.data.baserepository;
+package nl.the_experts.tackle_eventual_consistency_with_domain_events.data.baserepository;
 
 import jakarta.persistence.EntityManager;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.kafka.KafkaProducerService;
 import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
 import org.springframework.data.jpa.repository.support.JpaRepositoryImplementation;
 import org.springframework.data.repository.core.RepositoryInformation;
-import uk.devoxx.tackle_eventual_consistency.domaininteraction.kafka.KafkaProducerService;
 
 public class BaseJpaRepositoryFactory extends JpaRepositoryFactory {
 

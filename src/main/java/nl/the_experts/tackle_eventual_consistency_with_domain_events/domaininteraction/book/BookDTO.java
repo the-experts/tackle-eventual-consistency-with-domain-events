@@ -1,7 +1,7 @@
 package nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.book;
 
-import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.DomainEvent;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.book.Book;
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.domain.domainevent.DomainEvent;
 import nl.the_experts.tackle_eventual_consistency_with_domain_events.domaininteraction.author.AuthorDTO;
 
 import java.util.List;

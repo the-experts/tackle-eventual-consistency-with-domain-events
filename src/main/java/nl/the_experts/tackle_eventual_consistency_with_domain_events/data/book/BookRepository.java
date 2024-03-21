@@ -1,7 +1,7 @@
 package nl.the_experts.tackle_eventual_consistency_with_domain_events.data.book;
 
+import nl.the_experts.tackle_eventual_consistency_with_domain_events.data.baserepository.BaseJpaRepository;
 import org.springframework.stereotype.Repository;
-import uk.devoxx.tackle_eventual_consistency.data.baserepository.BaseJpaRepository;
 
 import java.util.List;
 
